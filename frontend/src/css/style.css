@@ -85,3 +85,147 @@ nav a:hover {
     background-color: #80f5dd;
 
 }
+
+
+/* ===== Unsere Kurse ===== */
+
+.courses {
+    padding: 80px 40px;
+    background-color: #101827;
+
+}
+
+.courses h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+
+}
+
+.courses > p {
+    font-size: 18px;
+    color: #d4dce6;
+          
+}
+
+/* Layout der Kurskarten */
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+
+}
+
+/* Enzelne Kurskarte */
+
+.course-card {
+    background-color: #172033;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px soild #29384a;
+    transition: transform 0.3s ease;
+
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    
+}
+
+/* Bilder der Kurse */
+
+.course-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+/* Texte */
+
+.course-card h3 {
+    font-size: 24px;
+    margin: 20px 20px 10px;
+}
+
+.course-card p {
+    color: #d4dce6;
+    margin: 0 20px 25px;
+    line-height: 1.6;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* Smartphone */
+
+@media (max-width: 600px) {
+    .courses {
+        padding: 50px 20px;
+
+    }
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Kursinformationen */
+
+.course-card p.course-meta {
+    font-size: 14px;
+    color: #b9c6d6;
+    margin: 0 20px 12px;
+}
+
+/* Buchungsbutton */
+
+.booking-button {
+    display: block;
+    margin: 15px 20px 25px;
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #37e6c3;
+    color: #101827;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Deaktivierter Button */
+
+.booking-button:disabled {
+    background-color: #526272;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+
+/* Gleiche Hoehe fuer alle Kurskarten */
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Buchungsbutton unten platzieren */
+
+.course-card .booking-button {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+
+
